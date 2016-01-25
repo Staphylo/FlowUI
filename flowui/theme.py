@@ -165,7 +165,7 @@ class ThemeMeta(type):
         return type.__call__(cls, *args, **kwds)
 
 
-class Theme(object):
+class Theme(object, metaclass=ThemeMeta):
     '''Base class for all FlowUI themes
 
     The Theme class provides all the basic functionality required to make a
@@ -197,7 +197,6 @@ class Theme(object):
     face-header     -- section headers etc
 
     '''
-    __metaclass__ = ThemeMeta
 
     name = None
     colors = []

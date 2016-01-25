@@ -28,15 +28,13 @@
 import abc
 
 
-class Widget(object):
+class Widget(object, metaclass=abc.ABCMeta):
     '''Abstract base class for all Widgets
 
     Defines the required API of any widget that is part of FlowUI and all
     Widgets must derive from this class.
 
     '''
-
-    __metaclass__ = abc.ABCMeta
 
     @abc.abstractmethod
     def draw(self, terminal, width):

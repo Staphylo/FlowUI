@@ -64,7 +64,7 @@ class Section(Widget):
         self._components.append(component)
 
     def draw(self, terminal, width):
-        width -= (width / 20)
+        width -= int(width / 20)
         self._draw_header(terminal, width)
 
         for component in self._components:

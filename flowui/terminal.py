@@ -31,7 +31,7 @@ import re
 import flowui.theme
 
 
-class Terminal(object):
+class Terminal(object, metaclass=abc.ABCMeta):
     '''Abstract base class for terminals
 
     Provides the base class for any terminal emulator used as an output device
